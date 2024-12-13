@@ -54,3 +54,75 @@ To get started with the project, clone the repository and install the dependenci
 git clone https://github.com/your-username/supervised-llm-agent.git
 cd supervised-llm-agent
 ```
+## Setup Python Environment
+It’s recommended to set up a virtual environment.
+
+```
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+```
+## Install Dependencies
+Install the required libraries from requirements.txt.
+
+```
+pip install -r requirements.txt
+```
+
+## Set Environment Variables
+Create a .env file using the .env.example as a template and fill in the required keys.
+
+```
+cp .env.example .env
+```
+## Usage
+# Running the Streamlit UI
+To start the interactive Streamlit UI, run:
+
+```
+streamlit run streamlit_ui.py
+```
+This will launch a web interface where you can interact with the Supervised LLM Agent.
+
+# Running the FastAPI Server
+To start the FastAPI backend, run:
+
+```
+uvicorn main:app --reload
+```
+This will start the FastAPI server, and you can interact with the system via API, receiving text inputs and audio outputs.
+
+## Using the Agents
+SQL Agent: To perform SQL operations, pass SQL queries through the Streamlit interface, and the SQL Agent will process them.
+PDF Agent: Upload PDFs, and ask questions about their content. The PDF Agent will extract and provide relevant answers.
+Supervised Agent: This central agent coordinates the actions of both the SQL Agent and the PDF Agent based on user queries.
+
+## Files Description
+# sql_agent.py
+Handles SQL operations and queries.
+
+# pdf_agent.py
+Extracts information from PDFs and responds with context-based answers.
+
+# supervised_agent.py
+Coordinates the SQL Agent and PDF Agent to work together seamlessly.
+
+# streamlit_ui.py
+Frontend interface using Streamlit to interact with the agents.
+
+main.py
+FastAPI server for handling user inputs and generating audio responses.
+
+requirements.txt
+Lists all dependencies required to run the project.
+
+.env.example
+Example environment configuration file, which needs to be filled with actual values.
+
+Requirements
+Python 3.10+
+Streamlit
+FastAPI
+LangChain
+LangGraph
+ElevenLabs API
+Required libraries (listed in requirements.txt)
