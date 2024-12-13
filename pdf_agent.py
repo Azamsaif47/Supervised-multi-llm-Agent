@@ -31,7 +31,7 @@ def load_and_split_pdfs(pdf_paths):
     return all_pages
 
 # Specify the folder containing the PDF files
-folder_path = "pdf_files"
+folder_path = "path to your pdf files"
 
 # Get a list of all PDF files in the folder
 pdf_paths = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.pdf')]
@@ -48,7 +48,7 @@ text_splitter = CharacterTextSplitter(
 
 docs = text_splitter.split_documents(loaded_pages)
 
-persist_directory = "D:/azam_voice/chromadb/faiss.index"
+persist_directory = "path to your persist directory"
 
 embeddings = OpenAIEmbeddings()
 

@@ -31,7 +31,7 @@ if db_uri is None:
     raise ValueError("Database URI is not found. Please ensure it is set as an environment variable.")
 
 # Path to the CA.pem file
-ca_file_path = "cassle.pem"
+ca_file_path = "path to your cassle.pem file if you are using it "
 
 # Update the db_uri with the CA certificate file if required
 db_uri += f"?ssl_ca={ca_file_path}"

@@ -5,7 +5,7 @@ from fastapi import FastAPI, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
-from graph import process_input  # Import the existing process_input function
+from supervised_agent import process_input  # Import the existing process_input function
 
 # Load environment variables from .env file
 load_dotenv(".env")
