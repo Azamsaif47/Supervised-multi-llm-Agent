@@ -75,7 +75,7 @@ Create a .env file using the .env.example as a template and fill in the required
 cp .env.example .env
 ```
 ## Usage
-# Running the Streamlit UI
+### Running the Streamlit UI
 To start the interactive Streamlit UI, run:
 
 ```
@@ -83,7 +83,7 @@ streamlit run streamlit_ui.py
 ```
 This will launch a web interface where you can interact with the Supervised LLM Agent.
 
-# Running the FastAPI Server
+### Running the FastAPI Server
 To start the FastAPI backend, run:
 
 ```
@@ -97,16 +97,16 @@ PDF Agent: Upload PDFs, and ask questions about their content. The PDF Agent wil
 Supervised Agent: This central agent coordinates the actions of both the SQL Agent and the PDF Agent based on user queries.
 
 ## Files Description
-# sql_agent.py
+### sql_agent.py
 Handles SQL operations and queries.
 
-# pdf_agent.py
+### pdf_agent.py
 Extracts information from PDFs and responds with context-based answers.
 
-# supervised_agent.py
+### supervised_agent.py
 Coordinates the SQL Agent and PDF Agent to work together seamlessly.
 
-# streamlit_ui.py
+### streamlit_ui.py
 Frontend interface using Streamlit to interact with the agents.
 
 main.py
