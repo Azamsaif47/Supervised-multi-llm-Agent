@@ -11,7 +11,6 @@ This repository contains a **Supervised Multi-LLM Agent**, an open-source projec
 - [Usage](#usage)
 - [Files Description](#files-description)
 - [Requirements](#requirements)
-- [License](#license)
 
 ## Overview
 
