@@ -108,20 +108,20 @@ Coordinates the SQL Agent and PDF Agent to work together seamlessly.
 ### streamlit_ui.py
 Frontend interface using Streamlit to interact with the agents.
 
-main.py
+**main.py**.
 FastAPI server for handling user inputs and generating audio responses.
 
-requirements.txt
+**requirements.txt**.
 Lists all dependencies required to run the project.
 
-.env.example
+**.env.example**.
 Example environment configuration file, which needs to be filled with actual values.
 
 ## Requirements
-Python 3.10+
-Streamlit
-FastAPI
-LangChain
-LangGraph
-ElevenLabs API
+Python 3.10+.
+Streamlit.
+FastAPI.
+LangChain.
+LangGraph.
+ElevenLabs API.
 Required libraries (listed in requirements.txt)
