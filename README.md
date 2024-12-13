@@ -117,7 +117,7 @@ Lists all dependencies required to run the project.
 .env.example
 Example environment configuration file, which needs to be filled with actual values.
 
-Requirements
+## Requirements
 Python 3.10+
 Streamlit
 FastAPI
