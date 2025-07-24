@@ -1,6 +1,6 @@
 # Supervised Multi-LLM Agent
 
-This repository contains a **Supervised Multi-LLM Agent**, an open-source project that integrates several LLM agents for performing SQL operations, processing PDF contexts, and responding in audio. The agents are controlled by a central "Supervised Agent" built using LangChain and LangGraph, enabling seamless interactions through a React-based interface.
+This repository contains a **Supervised Multi-LLM Agent**, an open-source project that integrates several LLM agents for performing SQL operations, processing PDF contexts, and responding in audio. The agents are controlled by a central "Supervised Agent" built using LangChain and LangGraph, enabling seamless interactions through a Streamlit-based interface.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ This repository contains a **Supervised Multi-LLM Agent**, an open-source projec
 
 ## Overview
 
-This project enables a multi-agent system where different LLM agents handle specific tasks, including SQL database operations, PDF context extraction, and audio responses. The Supervised Agent, powered by LangChain and LangGraph, acts as the coordinator, managing the different agents and ensuring smooth operations. The project includes a **React UI** for user-friendly interaction.
+This project enables a multi-agent system where different LLM agents handle specific tasks, including SQL database operations, PDF context extraction, and audio responses. The Supervised Agent, powered by LangChain and LangGraph, acts as the coordinator, managing the different agents and ensuring smooth operations. The project includes a **Streamlit UI** for user-friendly interaction.
 
 ## Components
 
@@ -27,8 +27,8 @@ This project enables a multi-agent system where different LLM agents handle spec
 3. **Supervised Agent (`supervised_agent.py`)**  
    The Supervised Agent is built using LangGraph and controls both the **SQL Agent** and **PDF Agent**. It coordinates the agents to work together efficiently and responds based on the context of the user's input.
 
-4. **React UI (`react_ui/`)**  
-   The React-based interface allows users to interact with the system. It sends inputs to the Supervised Agent and displays the outputs in an intuitive, modern format.
+4. **Streamlit UI**  
+   The Streamlit-based interface allows users to interact with the system through a simple web application. It sends inputs to the Supervised Agent and displays the outputs in an intuitive format.
 
 5. **FastAPI (`main.py`)**  
    The FastAPI framework is used to create a backend that takes user input in text form and returns the response in audio format using ElevenLabs APIs.
@@ -44,7 +44,7 @@ This project enables a multi-agent system where different LLM agents handle spec
 - Perform **SQL operations** with ease through the SQL Agent.
 - Extract and answer questions based on **PDF files** with the PDF Agent.
 - **Supervised Agent** manages both agents, ensuring smooth coordination.
-- Interactive UI using **React** for seamless user interactions.
+- Interactive UI using **Streamlit** for seamless user interactions.
 - **Audio output** using ElevenLabs APIs, allowing the system to speak back to users.
 - **Memory Management** using **Zep Memory or Mem0 Memory** for better conversation retention.
 - Scalable architecture with the ability to add more agents for other tasks.
@@ -53,42 +53,40 @@ This project enables a multi-agent system where different LLM agents handle spec
 
 To get started with the project, clone the repository and install the dependencies.
 
-```
+```bash
 git clone https://github.com/your-username/supervised-llm-agent.git
 cd supervised-llm-agent
 ```
 
-## Setup Python Environment
-It’s recommended to set up a virtual environment.
+### Setup Python Environment
+It's recommended to set up a virtual environment.
 
-```
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 ```
 
-## Install Dependencies
+### Install Dependencies
 Install the required libraries from requirements.txt.
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-## Set Environment Variables
+### Set Environment Variables
 Create a .env file using the .env.example as a template and fill in the required keys.
 
-```
+```bash
 cp .env.example .env
 ```
 
 ## Usage
 
-### Running the React UI
-To start the React-based frontend, navigate to the `react_ui/` directory and run:
+### Running the Streamlit UI
+To start the Streamlit-based frontend, run:
 
-```
-cd react_ui
-npm install
-npm start
+```bash
+streamlit run app.py
 ```
 
 This will launch a web interface where you can interact with the Supervised LLM Agent.
@@ -96,7 +94,7 @@ This will launch a web interface where you can interact with the Supervised LLM 
 ### Running the FastAPI Server
 To start the FastAPI backend, run:
 
-```
+```bash
 uvicorn main:app --reload
 ```
 
@@ -104,7 +102,7 @@ This will start the FastAPI server, and you can interact with the system via API
 
 ## Using the Agents
 
-- **SQL Agent:** To perform SQL operations, pass SQL queries through the React UI, and the SQL Agent will process them.
+- **SQL Agent:** To perform SQL operations, pass SQL queries through the Streamlit UI, and the SQL Agent will process them.
 - **PDF Agent:** Upload PDFs and ask questions about their content. The PDF Agent will extract and provide relevant answers.
 - **Supervised Agent:** This central agent coordinates the actions of both the SQL Agent and the PDF Agent based on user queries.
 
@@ -119,8 +117,8 @@ Extracts information from PDFs and responds with context-based answers.
 ### supervised_agent.py
 Coordinates the SQL Agent and PDF Agent to work together seamlessly.
 
-### react_ui/
-Frontend interface using React to interact with the agents.
+### app.py
+Streamlit application for the user interface.
 
 ### main.py
 FastAPI server for handling user inputs and generating audio responses.
@@ -134,7 +132,7 @@ Example environment configuration file, which needs to be filled with actual val
 ## Requirements
 
 - Python 3.10+
-- React
+- Streamlit
 - FastAPI
 - LangChain
 - LangGraph
