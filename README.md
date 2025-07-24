@@ -86,7 +86,7 @@ cp .env.example .env
 To start the Streamlit-based frontend, run:
 
 ```bash
-streamlit run app.py
+streamlit run streamlit_ui.py
 ```
 
 This will launch a web interface where you can interact with the Supervised LLM Agent.
@@ -108,6 +108,12 @@ This will start the FastAPI server, and you can interact with the system via API
 
 ## Files Description
 
+### streamlit_ui.py
+Streamlit application for the user interface.
+
+### main.py
+FastAPI server for handling user inputs and generating audio responses.
+
 ### sql_agent.py
 Handles SQL operations and queries.
 
@@ -117,17 +123,14 @@ Extracts information from PDFs and responds with context-based answers.
 ### supervised_agent.py
 Coordinates the SQL Agent and PDF Agent to work together seamlessly.
 
-### app.py
-Streamlit application for the user interface.
-
-### main.py
-FastAPI server for handling user inputs and generating audio responses.
-
 ### requirements.txt
 Lists all dependencies required to run the project.
 
 ### .env.example
 Example environment configuration file, which needs to be filled with actual values.
+
+### .gitignore
+Specifies files and directories to be ignored by Git version control.
 
 ## Requirements
 
